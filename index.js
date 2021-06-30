@@ -68,9 +68,10 @@ app.post('/recipes', (req, res) => {
 
 
 
-connection.connect((err) => {
+connection.getConnection((err) => {
     if (err) {
       console.error('error connecting to db');
+      console.log(err)
     } else {
       console.log('connected to db');
     }
